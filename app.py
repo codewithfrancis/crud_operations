@@ -4,8 +4,8 @@ from components import app
 from components.home.ui import index
 from components.blog.ui import blog
 
+app.register_blueprint(blog, url_prefix="/")
 app.register_blueprint(index)
-app.register_blueprint(blog)
 
 if __name__ == '__main__':
     app.run(debug=True)

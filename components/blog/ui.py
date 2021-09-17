@@ -1,7 +1,7 @@
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template, redirect, url_for
 
-blog = Blueprint('blog',__name__, template_folder='boiletplate')
+blog = Blueprint('blog',__name__, template_folder='boilerplate')
 
-@blog.route('/home')
+@blog.route('/')
 def HomeRedirector():
-    return redirect('index.Home')
+    return redirect(url_for('index.Home'))
